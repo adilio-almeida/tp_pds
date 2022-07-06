@@ -1,8 +1,8 @@
 #include <string>
 #include <iostream>
-#include "quartos.hpp"
-#include "vip.hpp"
-#include "hotel.hpp"
+#include "../include/quartos.hpp"
+#include "../include/vip.hpp"
+#include "../include/hotel.hpp"
 
 using namespace std;
 
@@ -12,15 +12,17 @@ enum {
   sair = 3,
 };
 
-bool verifyInput(int command) {
+int verifyInput(int command) {
   if(!command || (command != checkIn && command != checkOut && command != sair) ) 
-    return false;
+    return 0;
   return command;
 }
 
 int main() {
 
-  // while(1) {
+  // Quarto quarto(101, 5 ,true,"Joao"); 
+  Hotel hotel = Hotel();
+
     int command = 0;
     cout << "Bem vindo ao hotel" << endl;
     cout << "O que deseja fazer?" << endl << "1: CheckIn" << endl << "2: ChecOut" << endl  << "3: Sair" << endl;
@@ -28,6 +30,7 @@ int main() {
 
     switch (verifyInput(command)) {
     case checkIn:
+      hotel.imprime_quartos(true);
       cout << "checkIn" << endl;
       break;
     case checkOut:
@@ -41,9 +44,6 @@ int main() {
       main();
       break;
     }
-    
-
-  // }
 
     // Quarto quarto(101, 5 ,true,"Joao"); 
 

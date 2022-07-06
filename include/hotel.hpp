@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include <exception>
-#include "quartos.hpp"
-#include "vip.hpp"
+#include "./quartos.hpp"
+#include "./vip.hpp"
 
 class Erro : public std::exception {
   public:
@@ -25,14 +25,14 @@ class CheckoutInvalido :public Erro {
 class Hotel {
 private:
 
-std::vector<Quarto> hospedes;
+std::vector<Quarto> quartos;
 
 public:
 
 Hotel();
 bool faz_checkin();
 bool faz_checkout();
-void imprime_quartos();
+void imprime_quartos(bool ocupado);
 
 };
 

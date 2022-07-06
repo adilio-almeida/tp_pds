@@ -4,21 +4,23 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
+
 class Quarto {
-private:
+protected:
   int numero;
   int checkout;
   bool ocupacao;
-  std::string cliente;
+  string cliente;
 public:
 
-Quarto();
-Quarto(int numero, int _checkout, bool _ocupacao, std::string _cliente);
+Quarto(int _numero = 0, int _checkout = 0, bool _ocupacao = false, string _cliente = "");
 
 int get_numero();
 int get_checkout();
 bool get_ocupacao();
-std::string get_cliente();
+string get_cliente();
 
 void imprime_dados();
 

@@ -1,11 +1,4 @@
-#include "quartos.hpp"
-
-Quarto::Quarto() {
-    numero= 0;
-    checkout = 0;
-    ocupacao = 0;
-    cliente = "NULL";
-}
+#include "../../include/quartos.hpp"
 
 Quarto::Quarto(int _numero, int _checkout, bool _ocupacao, std::string _cliente) {
     
