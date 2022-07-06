@@ -7,9 +7,9 @@ output: main.o clientes.o quartos.o
 main.o: ./src/main.cpp
 	g++ $(INCLUDE) -c ./src/main.cpp -o ./build/main.o
 	
-Funcionario.o: ./src/clientes.cpp
+clientes.o: ./src/clientes.cpp
 	g++ $(INCLUDE) -c ./src/clientes.cpp -o ./build/clientes.o
 	
-Professor.o: ./src/quartos.cpp
+quartos.o: ./src/quartos.cpp
 	g++ $(INCLUDE) -c ./src/quartos.cpp -o ./build/quartos.o
 	
