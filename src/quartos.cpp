@@ -1,7 +1,7 @@
 #include "quartos.hpp"
 
 Quarto::Quarto() {
-    numero=0;
+    numero= 0;
     checkout = 0;
     ocupacao = 0;
     cliente = "NULL";
