@@ -1,15 +1,14 @@
 #include <string>
-#include "../../include/quartos.hpp"
 #include "../../include/vip.hpp"
 
-QuartoVIP::QuartoVIP(int _numero, int _checkout, bool _ocupacao, std::string _cliente): Quarto(_numero, _checkout, _ocupacao, _cliente),
- tipo("VIP"),
- preco(10.00) {}
+QuartoVIP::QuartoVIP(int numero, int checkout, bool ocupacao, std::string cliente, std::string tipo, double preco): Quarto(numero, checkout, ocupacao, cliente),
+ _tipo(tipo),
+ _preco(preco) {}
 
 std::string QuartoVIP::get_tipo() {
-    return tipo;
+    return _tipo;
 }
 
 double QuartoVIP::get_preco() {
-    return preco;
+    return _preco;
 }

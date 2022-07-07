@@ -7,14 +7,14 @@
 using namespace std;
 
 class Quarto {
-protected:
-  int numero;
-  int checkout;
-  bool ocupacao;
-  string cliente;
-public:
 
-Quarto(int _numero = 0, int _checkout = 0, bool _ocupacao = false, string _cliente = "");
+private:
+  int _numero;
+  int _checkout;
+  bool _ocupacao;
+  string _cliente;
+public:
+Quarto(int numero, int checkout, bool ocupacao, string cliente);
 
 int get_numero();
 int get_checkout();

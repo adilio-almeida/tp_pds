@@ -1,28 +1,26 @@
 #include "../../include/quartos.hpp"
 
-Quarto::Quarto(int _numero, int _checkout, bool _ocupacao, std::string _cliente) {
-    
-    numero = _numero;
-    checkout = _checkout;
-    ocupacao = _ocupacao;
-    cliente = _cliente;
-
-}
+Quarto::Quarto(int numero, int checkout, bool ocupacao, std::string cliente): 
+    _numero(numero),
+    _checkout(checkout),
+    _ocupacao(ocupacao), 
+    _cliente(cliente) {
+    }
 
 int Quarto::get_numero() {
-    return numero;
+    return _numero;
 }
 
 int Quarto::get_checkout() {
-    return checkout;
+    return _checkout;
 }
 
 bool Quarto::get_ocupacao() {
-    return ocupacao;
+    return _ocupacao;
 }
 
 std::string Quarto::get_cliente() {
-    return cliente;
+    return _cliente;
 }
 
 
@@ -35,12 +33,12 @@ void Quarto::imprime_dados() {
 
 
 void Quarto::set_ocupacao(bool i) {
-    ocupacao = i;
+    _ocupacao = i;
 }
 void Quarto::set_cliente(string cli) {
-    cliente = cli;
+    _cliente = cli;
 }
 
 void Quarto::set_checkout(int i){
-    checkout = i;
+    _checkout = i;
 }

@@ -10,11 +10,12 @@ Hotel::Hotel() {
     
     for(int i = 0 ; i < 100 ; i++) {
         
-        quartos.push_back(Quarto(i, 0, false, "SUS"));
+        quartos.push_back(QuartoVIP(i, 0, false, "SUS", "vip", 50.00));
 
     }
 
 }
+
 bool Hotel::faz_checkin() {
     return false;
 }
@@ -26,7 +27,7 @@ bool Hotel::faz_checkout() {
 void Hotel::imprime_quartos(bool ocupado) {
 
     for(int i = 0 ; i < 100 ; i++) {
-        cout << quartos[i].get_numero() << endl;
+        cout << quartos[i].get_tipo() << endl;
     }
 
 }

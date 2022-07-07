@@ -25,7 +25,7 @@ class CheckoutInvalido :public Erro {
 class Hotel {
 private:
 
-std::vector<Quarto> quartos;
+std::vector<QuartoVIP> quartos;
 
 public:
 
