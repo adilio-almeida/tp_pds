@@ -1,54 +1,60 @@
 #include <string>
 #include <iostream>
-#include "../include/quartos.hpp"
-#include "../include/vip.hpp"
-#include "../include/hotel.hpp"
+#include "entidades\quartos.cpp"
+#include "entidades\STD.cpp"
+#include "entidades\vip.cpp"
+#include "entidades\hotel.cpp"
 
 using namespace std;
 
 enum {
   checkIn = 1,
   checkOut = 2,
-  sair = 3,
+  quartosvaz = 3,
+  quartosocu = 4,
+  sair = 5,
 };
 
 int verifyInput(int command) {
-  if(!command || (command != checkIn && command != checkOut && command != sair) ) 
+  if(!command || (command != checkIn && command != checkOut && command != quartosvaz && command != quartosocu && command != sair) ) 
     return 0;
   return command;
 }
 
 int main() {
 
-   Quarto quarto(101, 5 ,true,"Joao"); 
-  Hotel hotel = Hotel();
+  Hotel hotel;
 
     int command = 0;
-    cout << "Bem vindo ao hotel" << endl;
-    cout << "O que deseja fazer?" << endl << "1: CheckIn" << endl << "2: ChecOut" << endl  << "3: Sair" << endl;
+    while(command != sair) {
+        
+    cout << "Bem vindo ao hotel, ";
+    cout << "o que deseja fazer?" << endl << "1. CheckIn" << endl << "2. CheckOut" << endl  <<  "3. Ver quartos vazios" << endl;
+    cout << "4. Ver quartos cheios"  << endl << "5. Sair" << endl;
     cin >> command;
 
     switch (verifyInput(command)) {
     case checkIn:
-      hotel.imprime_quartos(true);
-      cout << "checkIn" << endl;
+      hotel.faz_checkin();
       break;
     case checkOut:
-      cout << "checkOut" << endl;
+      hotel.faz_checkout();
+      break;
+    case quartosvaz:
+      hotel.imprime_quartos(false);
+      break;
+    case quartosocu:
+      hotel.imprime_quartos(true);
       break;
     case sair:
-      cout << "Sair" << endl;
       break;
     default:
       cout << "Comando invalido" << endl;
       main();
       break;
     }
-
-    // Quarto quarto(101, 5 ,true,"Joao"); 
-
-  //  cout << quarto.get_nome();  // << endl << quarto.get_checkout() << endl << quarto.get_tipo();
+    
+    }
 
     return 0;
 }
-

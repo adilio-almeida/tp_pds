@@ -7,12 +7,22 @@
 #include "./quartos.hpp"
 #include "./vip.hpp"
 
+using namespace std;
+
 class Erro : public std::exception {
   public:
   virtual const char* what() const noexcept {
     return "Erro Genérico!";
   }
 };
+
+class TipoQuartoInvalido :public Erro {
+  public:
+    virtual const char* what() const noexcept {
+      return "O numero de quarto informado nao e o tipo pedido, tente novamente";
+    }
+};
+
 
 class CheckoutInvalido :public Erro {
   public:
@@ -21,11 +31,24 @@ class CheckoutInvalido :public Erro {
     }
 };
 
+class CheckInInvalido :public Erro {
+  public:
+    virtual const char* what() const noexcept {
+      return "Ops, houve um erro no checkin, por favor tente novamente";
+    }
+};
+
+class QuartoInvalido :public Erro {
+  public:
+    virtual const char* what() const noexcept {
+      return "Numero de quarto invalido";
+    }
+};
 
 class Hotel {
 private:
 
-std::vector<QuartoVIP> quartos;
+vector<Quarto*> quartos;
 
 public:
 
@@ -35,5 +58,6 @@ bool faz_checkout();
 void imprime_quartos(bool ocupado);
 
 };
+
 
 #endif

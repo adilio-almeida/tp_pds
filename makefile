@@ -1,11 +1,14 @@
 
 INCLUDE = -I ./include*
 
-output:  quartos.o vip.o hotel.o main.o 
+output:  quartos.o vip.o  STD.o hotel.o main.o 
 	g++ ./build/quartos.o ./build/hotel.o  ./build/vip.o  ./build/main.o -o Programa
 
 hotel.o: ./src/entidades/hotel.cpp
 	g++ $(INCLUDE) -c ./src/entidades/hotel.cpp -o ./build/hotel.o
+	
+STD.o: ./src/entidades/STD.cpp
+	g++ $(INCLUDE) -c ./src/entidades/STD.cpp -o ./build/STD.o
 	
 quartos.o: ./src/entidades/quartos.cpp
 	g++ $(INCLUDE) -c ./src/entidades/quartos.cpp -o ./build/quartos.o
