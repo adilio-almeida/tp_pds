@@ -1,8 +1,8 @@
-#include "../../include/hotel.hpp"
 #include <string>
 #include <iostream>
 #include "../../include/quartos.hpp"
 #include "../../include/vip.hpp"
+#include "../../include/hotel.hpp"
 
 using namespace std;
 

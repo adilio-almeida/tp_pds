@@ -32,3 +32,15 @@ void Quarto::imprime_dados() {
     << " " << this->get_cliente() << std::endl;
 
 }
+
+
+void Quarto::set_ocupacao(bool i) {
+    ocupacao = i;
+}
+void Quarto::set_cliente(string cli) {
+    cliente = cli;
+}
+
+void Quarto::set_checkout(int i){
+    checkout = i;
+}

@@ -20,7 +20,7 @@ int verifyInput(int command) {
 
 int main() {
 
-  // Quarto quarto(101, 5 ,true,"Joao"); 
+   Quarto quarto(101, 5 ,true,"Joao"); 
   Hotel hotel = Hotel();
 
     int command = 0;

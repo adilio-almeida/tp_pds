@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 class Quarto {
 protected:
   int numero;
@@ -21,6 +20,9 @@ int get_numero();
 int get_checkout();
 bool get_ocupacao();
 string get_cliente();
+void set_ocupacao(bool);
+void set_checkout(int);
+void set_cliente(string);
 
 void imprime_dados();
 
