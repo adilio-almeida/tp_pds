@@ -53,8 +53,8 @@ vector<Quarto*> quartos;
 public:
 
 Hotel();
-bool faz_checkin();
-bool faz_checkout();
+void faz_checkin();
+void faz_checkout();
 void imprime_quartos(bool ocupado);
 
 };

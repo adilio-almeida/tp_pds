@@ -21,6 +21,7 @@ int get_checkout();
 bool get_ocupacao();
 string get_cliente();
 virtual void imprime_dados() = 0;
+virtual double get_preco() = 0;
 
 };
 

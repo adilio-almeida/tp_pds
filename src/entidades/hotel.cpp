@@ -26,7 +26,7 @@ Hotel::Hotel() {
 
 }
 
-bool Hotel::faz_checkin() {
+void Hotel::faz_checkin() {
 
     int numq=0;
     int numdias=0;
@@ -67,13 +67,27 @@ bool Hotel::faz_checkin() {
     else
         throw(CheckInInvalido());
 
-    
-
-    return true;
 }
 
-bool Hotel::faz_checkout() {
-    return false;
+void Hotel::faz_checkout() {
+
+cout << "\nDigite o numero de um quarto ocupado para fazer checkout\n";
+int n;
+cin >> n;
+
+if(n < 0 || n > 99 || quartos[n]->get_ocupacao() == 0)
+    throw(CheckoutInvalido());
+
+double preco = quartos[n]->get_checkout() * quartos[n]->get_preco();
+
+    delete quartos[n];
+Quarto *a = new QuartoSTD();
+    quartos[n] = a;
+
+cout << "\nO preco total da estadia foi de " << preco << " reais.\nAgradecemos sua estadia e volte sempre!\n\n";
+
+
+
 }
 
 void Hotel::imprime_quartos(bool ocupado) {
