@@ -102,10 +102,15 @@ void Hotel::imprime_quartos(bool ocupado){
     cout << endl;
 
     if (ocupado){
+        int x = 0;
         for (int i = 0; i < 100; i++){
-            if (quartos[i]->get_ocupacao())
+            if (quartos[i]->get_ocupacao()){
                 quartos[i]->imprime_dados();
+                x++;
+            }
         }
+        if(!x)
+            cout << "\nO hotel estah vazio ;-;\n";
     }
 
     else{
