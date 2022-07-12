@@ -2,7 +2,7 @@
 #define VIP_H
 
 #include <string>
-#include "./quartos.hpp"
+#include "./quarto.hpp"
 
 class QuartoVIP: public Quarto {
 protected:

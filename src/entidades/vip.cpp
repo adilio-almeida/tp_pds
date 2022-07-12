@@ -16,7 +16,7 @@ double QuartoVIP::get_preco() {
 
 void QuartoVIP::imprime_dados() {
 
-    std::cout << "\nQuarto VIP !\n";
+    std::cout << "\nQuarto VIP!\n";
     std::cout << "Numero: "<< this->get_numero() << " " << "\nDias para CheckOut: "<<  this->get_checkout() 
     << "\nNome hospede: " << this->get_cliente() << std::endl;
 

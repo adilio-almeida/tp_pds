@@ -1,4 +1,4 @@
-#include "../../include/quartos.hpp"
+#include "../../include/quarto.hpp"
 
 Quarto::Quarto(int _numero, int _checkout, bool _ocupacao, std::string _cliente) {
     

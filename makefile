@@ -1,21 +1,21 @@
 
 INCLUDE = -I ./include*
 
-output:  quartos.o vip.o  STD.o hotel.o main.o 
-	g++ ./build/quartos.o ./build/hotel.o  ./build/vip.o  ./build/main.o -o Programa
+output: quarto.o std.o vip.o hotel.o main.o 
+	g++ ./build/quarto.o ./build/std.o ./build/hotel.o ./build/vip.o ./build/main.o -o Programa
 
-hotel.o: ./src/entidades/hotel.cpp
-	g++ $(INCLUDE) -c ./src/entidades/hotel.cpp -o ./build/hotel.o
-	
-STD.o: ./src/entidades/STD.cpp
-	g++ $(INCLUDE) -c ./src/entidades/STD.cpp -o ./build/STD.o
-	
-quartos.o: ./src/entidades/quartos.cpp
-	g++ $(INCLUDE) -c ./src/entidades/quartos.cpp -o ./build/quartos.o
+quarto.o: ./src/entidades/quarto.cpp
+	g++ $(INCLUDE) -c ./src/entidades/quarto.cpp -o ./build/quarto.o
+
+std.o: ./src/entidades/std.cpp
+	g++ $(INCLUDE) -c ./src/entidades/std.cpp -o ./build/std.o
 
 vip.o: ./src/entidades/vip.cpp
 	g++ $(INCLUDE) -c ./src/entidades/vip.cpp -o ./build/vip.o
 
+hotel.o: ./src/entidades/hotel.cpp
+	g++ $(INCLUDE) -c ./src/entidades/hotel.cpp -o ./build/hotel.o
+	
 main.o: ./src/main.cpp
 	g++ $(INCLUDE) -c ./src/main.cpp -o ./build/main.o
 

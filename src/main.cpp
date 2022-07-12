@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
-#include "entidades\quartos.cpp"
-#include "entidades\STD.cpp"
+#include "entidades\quarto.cpp"
+#include "entidades\std.cpp"
 #include "entidades\vip.cpp"
 #include "entidades\hotel.cpp"
 
@@ -28,8 +28,11 @@ int main() {
     int command = 0;
     while(command != sair) {
         
-    cout << "Bem vindo ao hotel, ";
-    cout << "o que deseja fazer?" << endl << "1. CheckIn" << endl << "2. CheckOut" << endl  <<  "3. Ver quartos vazios" << endl;
+    cout << "\n------------------------------------------------------------" << endl;
+    cout << "Bem vindo ao Hotel California!" << endl;
+    cout << "-------------------------------------------------------------\n" << endl;
+    cout << "O que deseja fazer?" << endl;
+    cout << "1. CheckIn" << endl << "2. CheckOut" << endl  <<  "3. Ver quartos vazios" << endl;
     cout << "4. Ver quartos cheios"  << endl << "5. Sair" << endl;
     cin >> command;
 
