@@ -2,7 +2,7 @@
 #define STD_H
 
 #include <string>
-#include "./quartos.hpp"
+#include "./quarto.hpp"
 
 using namespace std;
 

@@ -1,9 +1,10 @@
 #include <string>
 #include <iostream>
-#include "entidades\quartos.cpp"
-#include "entidades\STD.cpp"
+#include "entidades\quarto.cpp"
+#include "entidades\std.cpp"
 #include "entidades\vip.cpp"
 #include "entidades\hotel.cpp"
+//#include "../include/hotel.hpp"
 
 using namespace std;
 
@@ -31,7 +32,7 @@ int main() {
     int command = 0;
     while(command != sair) {
         
-    cout << "\n\nBem vindo ao hotel,\n";
+    cout << "\n\n     Bem vindo ao\n-------------------------\n    Hotel California\n-------------------------\n";
     cout << "o que deseja fazer?\n" << "1. CheckIn\n" << "2. CheckOut\n" << "3. Ver quartos vazios\n";
     cout << "4. Ver quartos cheios\n" << "5. Ver servicos de quarto pendentes\n" << "6. Atender quarto\n" << "7. CLIENTE: Pedir servico de quarto \n8.Sair\n";
     cin >> command;

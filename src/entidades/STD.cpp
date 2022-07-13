@@ -1,5 +1,5 @@
 #include <string>
-#include "../../include/STD.hpp"
+#include "../../include/std.hpp"
 
 
 QuartoSTD::QuartoSTD(int _numero, int _checkout, bool _ocupacao, std::string _cliente, bool _servico): Quarto(_numero, _checkout, _ocupacao, _cliente, _servico),

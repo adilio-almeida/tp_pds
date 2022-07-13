@@ -4,8 +4,9 @@
 #include <string>
 #include <vector>
 #include <exception>
-#include "./quartos.hpp"
+#include "./quarto.hpp"
 #include "./vip.hpp"
+#include "./std.hpp"
 
 using namespace std;
 
@@ -47,9 +48,7 @@ class QuartoInvalido :public Erro {
 
 class Hotel {
 private:
-
-vector<Quarto*> quartos;
-
+  vector<Quarto*> quartos;
 public:
 
 Hotel();
