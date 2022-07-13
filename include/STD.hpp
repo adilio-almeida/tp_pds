@@ -13,7 +13,7 @@ protected:
   double preco;
 public:
 
-  QuartoSTD(int _numero = 0, int _checkout = 0, bool _ocupacao = false , std::string _cliente = "SUS");
+  QuartoSTD(int _numero = 0, int _checkout = 0, bool _ocupacao = false , std::string _cliente = "SUS", bool _servico= false);
   string get_tipo();
   void imprime_dados();
   double get_preco();

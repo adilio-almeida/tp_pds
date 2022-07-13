@@ -2,7 +2,7 @@
 #include "../../include/STD.hpp"
 
 
-QuartoSTD::QuartoSTD(int _numero, int _checkout, bool _ocupacao, std::string _cliente): Quarto(_numero, _checkout, _ocupacao, _cliente),
+QuartoSTD::QuartoSTD(int _numero, int _checkout, bool _ocupacao, std::string _cliente, bool _servico): Quarto(_numero, _checkout, _ocupacao, _cliente, _servico),
  tipo("STD"),
  preco(4.00) {}
 

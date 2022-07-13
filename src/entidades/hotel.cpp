@@ -12,14 +12,14 @@ Hotel::Hotel() {
     
     for(int i = 0 ; i < 80 ; i++) {
         
-        Quarto *a = new QuartoSTD(i, 0, false, "SUS");
+        Quarto *a = new QuartoSTD(i, 0, false, "SUS",false);
         quartos.push_back(a);
 
     }
 
     for(int i = 0 ; i < 20 ; i++) {
         
-        Quarto *a = new QuartoVIP(i+80, 0, false, "SUS");
+        Quarto *a = new QuartoVIP(i+80, 0, false, "SUS",false);
         quartos.push_back(a);
 
     }
@@ -85,8 +85,53 @@ Quarto *a = new QuartoSTD();
     quartos[n] = a;
 
 cout << "\nO preco total da estadia foi de " << preco << " reais.\nAgradecemos sua estadia e volte sempre!\n\n";
+}
 
 
+void Hotel::servicos_pendentes() {
+
+    int aux=0;
+    for(int i = 0 ; i < 100 ; i++) {
+            if(quartos[i]->get_ocupacao() && quartos[i]->get_servico())
+                cout << "\nQuarto de numero " << i << " necessita de servico de quarto!" << endl;
+            else
+                aux++;
+        }
+    if(aux==100)
+        cout << "\nNenhum quarto necessita de servicos!\n";
+}
+
+void Hotel::pedir_servQuarto() {
+
+    int quart = -1;
+    cout << "\nQual o quarto a ser atendido?" << endl;
+    cin >> quart;
+
+    if(quart < 0 || quart > 99)
+        throw(QuartoInvalido());
+    else if(quartos[quart]->get_servico())
+        cout << "\nEste quarto ja pediu serviços!";
+    else if(!quartos[quart]->get_ocupacao())
+        cout << "\nEste quarto esta vazio!";
+    else
+        quartos[quart]->set_servico(true);
+    
+
+}
+
+void Hotel::servicoQuarto() {
+
+    int quart = -1;
+    cout << "\nQual o quarto atendido?" << endl;
+    cin >> quart;
+
+    if(quart < 0 || quart > 99)
+        throw(QuartoInvalido());
+    else if(!quartos[quart]->get_servico())
+        cout << "\nEste quarto nao necessita de servicos!";
+    else
+        quartos[quart]->set_servico(false);
+    
 
 }
 

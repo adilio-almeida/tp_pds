@@ -55,6 +55,9 @@ public:
 Hotel();
 void faz_checkin();
 void faz_checkout();
+void servicoQuarto();
+void servicos_pendentes();
+void pedir_servQuarto();
 void imprime_quartos(bool ocupado);
 
 };

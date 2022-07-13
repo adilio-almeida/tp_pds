@@ -12,11 +12,14 @@ enum {
   checkOut = 2,
   quartosvaz = 3,
   quartosocu = 4,
-  sair = 5,
+  servpendente = 5,
+  servquarto = 6,
+  pedirservquarto = 7, 
+  sair = 8,
 };
 
 int verifyInput(int command) {
-  if(!command || (command != checkIn && command != checkOut && command != quartosvaz && command != quartosocu && command != sair) ) 
+  if(!command || ( command < 0 || command > 8) ) 
     return 0;
   return command;
 }
@@ -28,9 +31,9 @@ int main() {
     int command = 0;
     while(command != sair) {
         
-    cout << "Bem vindo ao hotel, ";
-    cout << "o que deseja fazer?" << endl << "1. CheckIn" << endl << "2. CheckOut" << endl  <<  "3. Ver quartos vazios" << endl;
-    cout << "4. Ver quartos cheios"  << endl << "5. Sair" << endl;
+    cout << "\n\nBem vindo ao hotel,\n";
+    cout << "o que deseja fazer?\n" << "1. CheckIn\n" << "2. CheckOut\n" << "3. Ver quartos vazios\n";
+    cout << "4. Ver quartos cheios\n" << "5. Ver servicos de quarto pendentes\n" << "6. Atender quarto\n" << "7. CLIENTE: Pedir servico de quarto \n8.Sair\n";
     cin >> command;
 
     switch (verifyInput(command)) {
@@ -45,6 +48,15 @@ int main() {
       break;
     case quartosocu:
       hotel.imprime_quartos(true);
+      break;
+    case pedirservquarto:
+      hotel.pedir_servQuarto();
+      break;
+    case servquarto:
+      hotel.servicoQuarto();
+      break;
+    case servpendente:
+      hotel.servicos_pendentes();
       break;
     case sair:
       break;

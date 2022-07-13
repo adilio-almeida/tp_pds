@@ -2,7 +2,7 @@
 #include "../../include/vip.hpp"
 
 
-QuartoVIP::QuartoVIP(int _numero, int _checkout, bool _ocupacao, std::string _cliente): Quarto(_numero, _checkout, _ocupacao, _cliente),
+QuartoVIP::QuartoVIP(int _numero, int _checkout, bool _ocupacao, std::string _cliente, bool _servico): Quarto(_numero, _checkout, _ocupacao, _cliente, _servico),
  tipo("VIP"),
  preco(10.00) {}
 
@@ -16,9 +16,9 @@ double QuartoVIP::get_preco() {
 
 void QuartoVIP::imprime_dados() {
 
-    std::cout << "\nQuarto VIP !\n";
+    std::cout << "\n***** Quarto VIP ******\n";
     std::cout << "Numero: "<< this->get_numero() << " " << "\nDias para CheckOut: "<<  this->get_checkout() 
-    << "\nNome hospede: " << this->get_cliente() << std::endl;
+    << "\nNome hospede: " << this->get_cliente() << "\n***** ----------- *****\n";
 
 }
 
