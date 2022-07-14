@@ -6,23 +6,37 @@
 
 using namespace std;
 
+/** @brief Classe responsável por inicializar os quartos.
+
+    Inicializa 100 quartos, sendo 80 stantard e 20 vips
+    @author Adilio
+    @date Julho 2022 
+*/
+
 Hotel::Hotel()
 {
     
     for(int i = 0 ; i < 80 ; i++) {
         
-        Quarto *a = new QuartoSTD(i, 0, false, "SUS",false);
-        quartos.push_back(a);
+        Quarto *quarto = new QuartoSTD(i, 0, false, "",false);
+        quartos.push_back(quarto);
     }
 
     for(int i = 0 ; i < 20 ; i++) {
         
-        Quarto *a = new QuartoVIP(i+80, 0, false, "SUS",false);
-        quartos.push_back(a);
+        Quarto *quarto = new QuartoVIP(i + 80, 0, false, "", false);
+        quartos.push_back(quarto);
 
     }
 
 }
+
+/** @brief Método checkin.
+
+    Realiza check in em um quarto vazio
+    @author Bruno Lages
+    @date Julho 2022 
+*/
 
 void Hotel::faz_checkin()
 {
@@ -68,6 +82,13 @@ void Hotel::faz_checkin()
         throw(CheckInInvalido());
 }
 
+/** @brief Método checkout.
+
+    Realiza check in em um quarto ocupado
+    @author Bruno Lages
+    @date Julho 2022 
+*/
+
 void Hotel::faz_checkout(){
 
     cout << "\nDigite o numero de um quarto ocupado para fazer checkout\n";
@@ -95,6 +116,13 @@ void Hotel::faz_checkout(){
     }
 }
 
+/** @brief Método serviços pendentes.
+
+    Verifica se o quarto tem algum serviço requisitado pelo cliente e exibe
+    @author J. Monteiro
+    @date Julho 2022 
+*/
+
 void Hotel::servicos_pendentes() {
 
     int aux=0;
@@ -107,6 +135,13 @@ void Hotel::servicos_pendentes() {
     if(aux==100)
         cout << "\nNenhum quarto necessita de servicos!\n";
 }
+
+/** @brief Método pedir serviço de quarto.
+
+    Feito para o cliente requisitar um serviço de quarto genérico.
+    @author J. Monteiro
+    @date Julho 2022 
+*/
 
 void Hotel::pedir_servQuarto() {
 
@@ -126,6 +161,13 @@ void Hotel::pedir_servQuarto() {
 
 }
 
+/** @brief Método serviço de quarto realizado.
+
+    SInaliza que um determinado quarto teve suas pendências resolvidas
+    @author J. Monteiro
+    @date Julho 2022 
+*/
+
 void Hotel::servicoQuarto() {
 
     int quart = -1;
@@ -140,6 +182,13 @@ void Hotel::servicoQuarto() {
         quartos[quart]->set_servico(false);
     
 }
+
+/** @brief Método imprimir quartos .
+
+    Recebe um status de ocupação e imprime os quartos correspondentes.
+    @author Adilio
+    @date Julho 2022 
+*/
 
 void Hotel::imprime_quartos(bool ocupado){
 

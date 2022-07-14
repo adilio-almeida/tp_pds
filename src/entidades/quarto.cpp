@@ -1,5 +1,12 @@
 #include "../../include/quarto.hpp"
 
+/** @brief Classe quarto
+
+    Modelo de quarto, englobando métodos comuns aos diferentes tipos de quarto.
+    @author Adilio
+    @date Julho 2022 
+*/
+
 Quarto::Quarto(int _numero, int _checkout, bool _ocupacao, std::string _cliente, bool _servico) {
     
     numero = _numero;
@@ -9,6 +16,13 @@ Quarto::Quarto(int _numero, int _checkout, bool _ocupacao, std::string _cliente,
     cliente = _cliente;
 
 }
+
+/** @brief Setters e Getters do quarto.
+
+    Retornam informações dos quartos, como número, ocupação, cliente e etc.
+    @author Adilio
+    @date Julho 2022 
+*/
 
 int Quarto::get_numero() {
     return numero;
