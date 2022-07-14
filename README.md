@@ -8,7 +8,7 @@
 <h3>Para compilar o projeto, com todas as dependências instaladas, basta rodar o comando "make" na raiz do projeto.</h3>
 
 <h3>Documentação e User Stories</h3>
-<p>Documentação: <a href="https://github.com/adilio-almeida/tp_pds/tree/main/doc">Clique aqui<a/> baixe o diretório e abra qualuqer um dos arquivos HTML </p>
+<p>Documentação: <a href="https://github.com/adilio-almeida/tp_pds/tree/main/doc">Clique aqui<a/> baixe o diretório e abra qualquer um dos arquivos HTML </p>
 <p>User Stories: <a href="https://docs.google.com/presentation/d/1zFt5y8Q2V6qHQOYXPt6LfR1qNXXrCOv5M1Hun0gmV3o/edit?usp=sharing"> Acesse os user stories</a>
 
 
