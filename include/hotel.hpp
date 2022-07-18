@@ -4,9 +4,9 @@
 #include <string>
 #include <vector>
 #include <exception>
-#include "./quarto.hpp"
-#include "./vip.hpp"
-#include "./std.hpp"
+#include "quarto.hpp"
+#include "vip.hpp"
+#include "std.hpp"
 
 using namespace std;
 

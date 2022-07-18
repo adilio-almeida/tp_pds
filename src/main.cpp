@@ -1,9 +1,5 @@
 #include <string>
 #include <iostream>
-//#include "entidades\quarto.cpp"
-//#include "entidades\std.cpp"
-//#include "entidades\vip.cpp"
-//#include "entidades\hotel.cpp"
 #include "../include/hotel.hpp"
 
 using namespace std;
